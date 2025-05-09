@@ -16,6 +16,7 @@
       --backdrop: blur(10px);
       --bg-color: #87cefa; /* Light Sky Blue */
       --modern-font: 'Roboto', sans-serif; /* Modern font */
+      --bold-font: 'Arial Black', Gadget, sans-serif; /* Bold font style */
     }
     body {
       background: var(--bg-color); /* Updated background color */
@@ -92,6 +93,11 @@
     .description-card {
       font-family: var(--modern-font); /* Apply modern font to description card */
     }
+    .description-card p.card-text,
+    .description-card h2.card-title {
+      font-family: var(--bold-font); /* Apply bold font style */
+      font-weight: bold; /* Make text bold */
+    }
   </style>
 </head>
 <body>
@@ -113,9 +119,9 @@
 
   <!-- Hero Section -->
   <section class="hero mx-auto my-5" style="max-width: 800px;">
-    <h1>Welcome to Symptom Analyzer </h1>
-    <p>Upload your symptoms and get AI-driven analysis in seconds.</p>
-    <a href="#apps" class="btn btn-custom mt-3">Explore Apps</a>
+    <h1>Welcome to Symptoms Analyzer </h1>
+    <p>Upload your symptoms and get AI-driven analysis in second.</p>
+    <a href="https://eb1d3245-2b9d-4fd7-83f3-e5c08a142281-00-nu46uragu3eo.janeway.replit.dev/" target="_blank" class="btn btn-custom mt-3">Launch the App</a>
   </section>
 
   <!-- App Cards -->
@@ -124,52 +130,53 @@
       <!-- Card 1 -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card h-100">
-          <a href="https://your-app1-link.streamlit.app" target="_blank">
-            <img src="assets/img1.png" alt="AI Symptoms Analyzer">
+          <!-- <a href="https://your-app1-link.streamlit.app" target="_blank"> -->
+            <img src="assets/symptoms.jpeg" alt="AI Symptoms Analyzer">
           </a>
           <div class="card-body">
-            <h5 class="card-title">Symptoms Analyzer</h5>
-            <p class="card-text">Upload your symptoms and get AI-driven analysis in seconds.</p>
-            <a href="https://gazn9amnoznpxgjdrvmy8b.streamlit.app" target="_blank" class="btn btn-custom">Launch</a>
+            <h5 class="card-title">Symptom Analysis</h5>
+            <p class="card-text">Users can select symptoms from a categorized list or input custom symptoms.
+                The app provides a detailed analysis of potential health conditions.</p>
+            <!-- <a href="https://gazn9amnoznpxgjdrvmy8b.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
           </div>
         </div>
       </div>
       <!-- Card 2 -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card h-100">
-          <a href="https://your-app2-link.streamlit.app" target="_blank">
-            <img src="assets/img2.png" alt="X-Ray Analyzer">
+          <!-- <a href="https://your-app2-link.streamlit.app" target="_blank"> -->
+            <img src="assets/assessment.jpeg" alt="X-Ray Analyzer">
           </a>
           <div class="card-body">
-            <h5 class="card-title">X-Ray Analyzer</h5>
-            <p class="card-text">Analyze X-Ray images with state-of-the-art AI models.</p>
-            <a href="https://adirohansuyal-x-ray-imaging-app-rsgood.streamlit.app" target="_blank" class="btn btn-custom">Launch</a>
+            <h5 class="card-title">Risk Assessment</h5>
+            <p class="card-text">Offers a risk level evaluation and alerts users if immediate medical attention is required.p>
+            <!-- <a href="https://adirohansuyal-x-ray-imaging-app-rsgood.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
           </div>
         </div>
       </div>
       <!-- Card 3 -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card h-100">
-          <a href="https://your-app3-link.streamlit.app" target="_blank">
-            <img src="assets/img3.png" alt="App Three">
+          <!-- <a href="https://your-app3-link.streamlit.app" target="_blank"> -->
+            <img src="assets/report.jpeg" alt="App Three">
           </a>
           <div class="card-body">
-            <h5 class="card-title">Report Analyzer</h5>
-            <p class="card-text">A smart app that instantly scans, interprets, and summarizes medical reports for faster, clearer insights.</p>
-            <a href="https://adirohansuyal-report-analyser-app-7hlnts.streamlit.app" target="_blank" class="btn btn-custom">Launch</a>
+            <h5 class="card-title">Custom Reports</h5>
+            <p class="card-text">Generates detailed reports in PDF, HTML, or QR Code formats for easy sharing with healthcare providers.</p>
+            <!-- <a href="https://adirohansuyal-report-analyser-app-7hlnts.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
           </div>
         </div>
       </div>
       <!-- Card 4 -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card h-100">
-          <a href="https://your-app4-link.streamlit.app" target="_blank">
-            <img src="assets/img4.png" alt="App Four">
+          <!-- <a href="https://your-app4-link.streamlit.app" target="_blank"> -->
+            <img src="assets/chat.jpeg" alt="App Four">
           </a>
           <div class="card-body">
-            <h5 class="card-title">Mood Tracker And Analyzer</h5>
-            <p class="card-text">A simple, intuitive app that tracks your mood patterns, analyzes emotional trends, and helps improve mental well-being.</p>
-            <a href="https://your-app4-link.streamlit.app" target="_blank" class="btn btn-custom">Launch</a>
+            <h5 class="card-title">Interactive Symptom Assistant</h5>
+            <p class="card-text">A conversational AI assistant helps users understand their symptoms and provides personalized advice</p>
+            <!-- <a href="https://your-app4-link.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
           </div>
         </div>
       </div>
@@ -182,10 +189,7 @@
           <div class="card-body">
             <h2 class="card-title text-center">About HealthMate AI</h2>
             <p class="card-text text-center mt-3">
-              HealthMate AI is your one-stop solution for AI-powered health diagnostics and insights. 
-              Our platform offers a suite of applications designed to analyze symptoms, medical reports, 
-              X-Ray images, and even track your mood patterns. With cutting-edge technology, we aim to 
-              empower individuals and healthcare professionals with actionable insights for better decision-making.
+                The AI Symptoms Checker is an innovative healthcare application designed to empower users with instant, AI-driven health insights. By leveraging advanced AI models like Google's Gemini AI or a custom backend model, the app analyzes user-provided symptoms and delivers personalized health condition assessments, risk evaluations, and actionable advice.
             </p>
           </div>
         </div>
