@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthMate AI</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --primary: #ffa07a; /* Light Orange */
+      --secondary: #ffdab9; /* Lighter Orange */
+      --card-bg: rgba(105, 105, 105, 0.9); /* Dark Grey card background */
+      --backdrop: blur(10px);
+      --bg-color: #d3d3d3; /* Grey Background */
+      --modern-font: 'Roboto', sans-serif;
+      --bold-font: 'Arial Black', Gadget, sans-serif;
+    }
+    body {
+      background: var(--bg-color); /* Updated background color */
+      color: #000; /* Change text color to black for better contrast */
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    .navbar {
+      backdrop-filter: var(--backdrop);
+      background: var(--card-bg);
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 1rem;
+      backdrop-filter: var(--backdrop);
+      background: var(--card-bg);
+      margin: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
+    }
+    .hero h1:hover {
+      color: var(--primary); /* Change color on hover */
+      transform: scale(1.1); /* Slightly enlarge the heading on hover */
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    .card {
+      background: var(--card-bg); /* Updated card background */
+      backdrop-filter: var(--backdrop);
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .card img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+    .card-body {
+      text-align: center;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .card-text {
+      font-size: 0.9rem;
+      color: rgba(0,0,0,0.8);
+    }
+    .btn-custom {
+      background: #fff;
+      color: var(--primary);
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-custom:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: rgba(0,0,0,0.7); /* Adjust footer text color */
+    }
+    .description-card {
+      font-family: var(--modern-font); /* Apply modern font to description card */
+      background: var(--card-bg); /* Ensure description card matches updated card background */
+    }
+    .description-card p.card-text,
+    .description-card h2.card-title {
+      font-family: var(--bold-font); /* Apply bold font style */
+      font-weight: bold; /* Make text bold */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">HealthMate AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#apps">Apps</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero mx-auto my-5" style="max-width: 800px;">
+    <h1>Welcome to X-Ray Analyzer </h1>
+    <p>Upload your X-Ray reports and get AI-driven analysis in second.</p>
+    <a href="https://eb1d3245-2b9d-4fd7-83f3-e5c08a142281-00-nu46uragu3eo.janeway.replit.dev/" target="_blank" class="btn btn-custom mt-3">Launch the App</a>
+  </section>
+
+  <!-- App Cards -->
+  <main id="apps" class="container my-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <!-- <a href="https://your-app1-link.streamlit.app" target="_blank"> -->
+            <img src="assets/im3.jpeg" alt="AI Symptoms Analyzer">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">AI-Powered X-Ray Analysis</h5>
+            <p class="card-text">Utilizes Google Generative AI or Fallback Local Deep Learning Model to analyze X-Ray images.
+              Provides detailed medical insights, including possible conditions and recommendations.</p>
+            <!-- <a href="https://gazn9amnoznpxgjdrvmy8b.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <!-- <a href="https://your-app2-link.streamlit.app" target="_blank"> -->
+            <img src="assets/anrp.jpeg" alt="X-Ray Analyzer">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Customizable AI Configuration</h5>
+            <p class="card-text">Configured with a system prompt, safety settings, and generation parameters from configs.</p>
+            <!-- <a href="https://adirohansuyal-x-ray-imaging-app-rsgood.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <!-- <a href="https://your-app3-link.streamlit.app" target="_blank"> -->
+            <img src="assets/download.jpeg" alt="App Three">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Downloadable Reports</h5>
+            <p class="card-text">Generates a structured analysis report that users can download as a text file.</p>
+            <!-- <a href="https://adirohansuyal-report-analyser-app-7hlnts.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <!-- <a href="https://your-app4-link.streamlit.app" target="_blank"> -->
+            <img src="assets/im2.jpeg" alt="App Four">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Interactive Chatbot Interaction</h5>
+            <p class="card-text">Users can ask follow-up questions based on the AI-generated report.</p>
+            <!-- <a href="https://your-app4-link.streamlit.app" target="_blank" class="btn btn-custom">Launch</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Description Card and Video Area -->
+    <section class="row mt-5">
+      <!-- Description Card -->
+      <div class="col-md-6">
+        <div class="card text-white description-card" style="background: var(--card-bg); backdrop-filter: var(--backdrop);">
+          <div class="card-body">
+            <h2 class="card-title text-center">About HealthMate AI</h2>
+            <p class="card-text text-center mt-3">
+             
+
+              This app, HealthMate AI: X-Ray Imaging Diagnosis, is a Streamlit-based web application designed to assist users in analyzing X-Ray images using AI. It provides medical insights and facilitates interaction with an AI-powered chatbot for further queries. This app is intended for educational and experimental purposes, providing users with AI-driven insights into X-Ray images. It is not a substitute for professional medical advice or diagnosis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Video Area -->
+      <div class="col-md-6">
+        <div class="card" style="background: var(--card-bg); backdrop-filter: var(--backdrop);">
+          <div class="card-body">
+            <h2 class="card-title text-center text-white">Watch Our Demo</h2>
+            <div class="ratio ratio-16x9 mt-3">
+              <video controls>
+                <source src="assets/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 HealthMate AI. All rights reserved.</p>
+    <p><a href="mailto:contact@healthmate.ai" class="text-white">contact@healthmate.ai</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
