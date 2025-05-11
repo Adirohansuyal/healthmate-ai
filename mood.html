@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthMate AI</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --primary: #ffa07a; /* Light Orange */
+      --secondary: #ffdab9; /* Lighter Orange */
+      --card-bg: #8b0000; /* Dark Red card background */
+      --backdrop: blur(10px);
+      --bg-color: #ffcccb; /* Light Red Background */
+      --modern-font: 'Roboto', sans-serif;
+      --bold-font: 'Arial Black', Gadget, sans-serif;
+    }
+    body {
+      background: var(--bg-color); /* Updated background color to light red */
+      color: #ffa07a; /* Light Orange color for all text */
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    .navbar {
+      backdrop-filter: var(--backdrop);
+      background: var(--card-bg);
+    }
+    .navbar .navbar-brand {
+      color: #ffa07a !important; /* Light Orange color for "HealthMate AI" */
+    }
+    .navbar .nav-link {
+      color: #ffa07a !important; /* Light Orange color for navbar links */
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 1rem;
+      backdrop-filter: var(--backdrop);
+      background: var(--card-bg);
+      margin: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    @keyframes fadeInBounce {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero h1 {
+      animation: fadeInBounce 1.5s ease-in-out; /* Apply animation */
+      color: #ffa07a; /* Light Orange color */
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
+    }
+    .hero h1:hover {
+      color: var(--primary); /* Change color on hover */
+      transform: scale(1.1); /* Slightly enlarge the heading on hover */
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #ffa07a; /* Light Orange color */
+    }
+    .card {
+      background: #ffe4e1; /* Light Pink card background */
+      backdrop-filter: var(--backdrop);
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .card img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+    .card-body {
+      text-align: center;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffa07a; /* Light Orange color for card headings */
+    }
+    .card-text {
+      font-size: 0.9rem;
+      color: #ffa07a; /* Ensure card text matches the new text color */
+    }
+    .btn-custom {
+      background: #fff;
+      color: #ffa07a; /* Light Orange color for button text */
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-custom:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #ffa07a; /* Update footer text color */
+    }
+    .description-card {
+      font-family: var(--modern-font); /* Apply modern font to description card */
+      background: var(--card-bg); /* Ensure description card matches updated card background */
+    }
+    .description-card p.card-text,
+    .description-card h2.card-title {
+      font-family: var(--bold-font); /* Apply bold font style */
+      font-weight: bold; /* Make text bold */
+      color: #ffa07a !important; /* Light Orange color for description card text */
+    }
+    .card-title.text-center {
+      color: #ffa07a; /* Light Orange color for "Watch Our Demo" */
+    }
+    .card-title.text-center.text-white {
+      color: #ffa07a !important; /* Light Orange color for video field's heading */
+    }
+    .card-dark-red {
+      background: #8b0000; /* Dark Red card background */
+      backdrop-filter: var(--backdrop);
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">HealthMate AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html#apps">Apps</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero mx-auto my-5" style="max-width: 800px;">
+    <h1>Welcome to AI Mood Predictor and Analyser </h1>
+    <p>Upload your Reatime Face through Video feed and get Realtime Mood Analysis </p>
+    <a href="https://adirohansuyal-mood-dash-app-yggqqr.streamlit.app"class="btn btn-custom mt-3">Launch the App</a>
+  </section>
+
+  <!-- App Cards -->
+  <main id="apps" class="container my-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dark-red h-100">
+          <img src="assets/moodcam.jpeg" alt="AI Symptoms Analyzer">
+          <div class="card-body">
+            <h5 class="card-title">Mood Capture and Analysis</h5>
+            <p class="card-text">Users can capture their mood using their webcam.
+                The app analyzes the captured image to detect emotions using the DeepFace library.
+                Displays the detected emotion, confidence score, and an emoji representing the emotion.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dark-red h-100">
+          <img src="assets/history.jpeg" alt="X-Ray Analyzer">
+          <div class="card-body">
+            <h5 class="card-title">Mood History</h5>
+            <p class="card-text">Displays historical mood data with filtering options by date range.
+                Provides metrics such as:
+                Total records.
+                Most frequent mood.
+                Unique sessions.
+                Visualizations include:
+                Pie chart for emotion distribution.
+                Line chart for emotions over time.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dark-red h-100">
+          <img src="assets/moodchat.jpeg" alt="App Three">
+          <div class="card-body">
+            <h5 class="card-title">All-Time Mood Analysis and Interactive Chat Feature</h5>
+            <p class="card-text">Bar chart showing the total occurrences of each mood.
+                Bar chart for the average emotion intensity (score) per mood. An Interactive Chatbot Powered by Gemini 2.0 Pro or Groq LLMs, for Mood Insights Tips</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dark-red h-100">
+          <img src="assets/session.jpeg" alt="App Four">
+          <div class="card-body">
+            <h5 class="card-title">Session Management</h5>
+            <p class="card-text">Users can start a new session with a unique session ID.
+                Current session ID is displayed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Description Card and Video Area -->
+    <section class="row mt-5">
+      <!-- Description Card -->
+      <div class="col-md-6">
+        <div class="card text-white description-card" style="background: var(--card-bg); backdrop-filter: var(--backdrop);">
+          <div class="card-body">
+            <h2 class="card-title text-center">About AI Mood Analyser</h2>
+            <p class="card-text text-center mt-3">
+             
+
+                The AI Mood Analyzer is an interactive web application built using Streamlit that allows users to capture and analyze their emotions in real-time using their webcam. It leverages the DeepFace library to detect emotions such as happiness, sadness, anger, and more, providing a confidence score and an emoji representation for better visualization. The app also maintains a history of mood data, enabling users to explore their emotional trends over time through metrics, charts, and heatmaps. Users can filter mood data by date, view overall mood statistics, and download their data as a CSV file. Additionally, the app offers session management, customizable settings, and a visually appealing interface with a background image and responsive design. It is designed to provide insights into emotional patterns while ensuring ease of use and data persistence.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Video Area -->
+      <div class="col-md-6">
+        <div class="card" style="background: var(--card-bg); backdrop-filter: var(--backdrop);">
+          <div class="card-body">
+            <h2 class="card-title text-center text-white">Watch Our Demo</h2>
+            <div class="ratio ratio-16x9 mt-3">
+              <video controls>
+                <source src="assets/videomood.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 HealthMate AI. All rights reserved.</p>
+    <p><a href="mailto:adityasuyal0001@outlook.com" class="text-white">adityasuyal0001@outlook.com</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
